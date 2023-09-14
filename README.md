@@ -184,7 +184,6 @@ Maven works by providing a standardized and declarative approach to building, ma
 4. **Build Lifecycle:**
     - Maven defines a standardized build lifecycle with well-defined phases, such as `clean`, `compile`, `test`, `package`, `install`, and `deploy`. These phases represent different stages in the software development and delivery process.
     - You can execute these phases using Maven commands (`mvn clean`, `mvn compile`, etc.), and Maven will perform the corresponding tasks defined in plugins bound to each phase.
-
 5. **Plugins:**
     - Plugins are extensions that enhance Maven's capabilities. Each phase of the build lifecycle can be associated with one or more plugins, which perform specific tasks. For example, the `maven-compiler-plugin` compiles source code, while the `maven-surefire-plugin` runs tests.
     - Plugins are configured in the POM file, specifying their goals (tasks) and configuration parameters.
@@ -235,25 +234,30 @@ Project Coordinates:
 >
 
 Application properties file:
-> By-default spring boot will load properties file from : application.properties
+* By-default spring boot will load properties file from : application.properties
 * Read data from application.properties file
-> #Configure server port :
-> server.port = 8585
-> * # Configure my props:
+> ### Configuring .properties file :
+> Configure server port :
+     server.port = 8585
 > * coach.name = Mickey Mouse
 > * team.name = The Mouse Crew
-    >   * # Reading Format: ** @Value("{coach.name}")
-          >     * private String coachName;
->     * # @Value("{team.name}")
->     * private String teamName;
->
->
+### Reading Format: 
+```java
+   @Value("{coach.name}")
+    private String coachName;
+```
+
+```java
+    @Value("{team.name}")
+    private String teamName;
+```
+
 #### Warning #####
 > Do not use the src/main/webapp directory if your application is packed as JAR file. Although this is a standard Maven directory
 > , it works only with WAR packaging. it is silently ignored by most build tools if you generate a JAR.
 >
 *****
-## Teamplates:
+## Teamlates:
 > Spring boot does autoconfiguration for following templates:
 > Freemarker:
 > **
@@ -262,7 +266,7 @@ Application properties file:
 > Mustache:
 > ** By Default spring boot will load templates from spring "/templates" directory
 >
-> *****
+> ***** 
 ## Spring boot starters:
 >
 > A curated list of maven dependencies.
@@ -272,6 +276,11 @@ Application properties file:
 > Reduces the amount of maven dependencies.
 >
 > Example: <Spring-boot-starter-web> (contains : spring_web; spring_webMVC; hibernate_validator; json; tomcat; etc)
+***
+# Spring Boot Dev Tools:
+> Enables you to automatically start the app after modifications.
+> 
+> Add "spring-boot-devtools" dependency in your pom.xml file.
 
 ****************
 # Spring Boot Actuators:
