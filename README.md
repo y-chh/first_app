@@ -311,10 +311,53 @@ Application properties file:
 > Option 1: java -jar <app_name.jar>
 > *** from terminal: get to the directory location and package the application using "./mvnw package".
 > this packs the application into target/ subdirectory
-> ## mvnw: allows you to run a Maven project, no need to have maven installed in your project path
+> ### mvnw: allows you to run a Maven project, no need to have maven installed in your project path
 > now cd into the directory(/target) where we packaged the .jar file
 > once you are in the right directory where .jar file is present: ##Use command: "java -jar <full_app_name_version>"
 ****
 
 > Option 2: Using spring boot maven plugin:
-> k 
+ 
+*************
+### Inversion of control:
+Ioc is a fundamental design pattern principle in software engineering and is one of the core concepts underlying the spring framework.
+IoC represents a shift in control over the flow of a program's execution , moving it from the program itself to a separate component or container.
+
+### Dependency Injection:
+Constructor based injection:
+Setter based injection:
+
+> @Component: marks the class as a Spring Bean. A Spring bean is just a regular java class that is managed by Spring.
+> Component also makes the bean available for DI.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
