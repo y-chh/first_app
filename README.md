@@ -298,16 +298,23 @@ Application properties file:
 > ** into.app.description = this is the description of the application
 > ** info.app.version = 1.0.0
 > #### when /info endpoint is triggered, it will expose these app information in json format.
->
+
+### How to secure these endpoints?
+>1. Using Spring security.
+
+***********
+## Spring Security:
+*************
+
 ##### Running application from commandline:
-***Two Options
+***Two Options 
 > Option 1: java -jar <app_name.jar>
-> *** from terminal: get to the directiory location and package the application using "./mvnw package".
-> this packes the application into target/ subdirectory
+> *** from terminal: get to the directory location and package the application using "./mvnw package".
+> this packs the application into target/ subdirectory
 > ## mvnw: allows you to run a Maven project, no need to have maven installed in your project path
 > now cd into the directory(/target) where we packaged the .jar file
 > once you are in the right directory where .jar file is present: ##Use command: "java -jar <full_app_name_version>"
 ****
 
 > Option 2: Using spring boot maven plugin:
-> k
+> k 
